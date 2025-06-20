@@ -1,0 +1,104 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Express TS Boilerplate API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/api/health": {
+      "get": {
+        "summary": "Health check endpoint",
+        "responses": {
+          "200": {
+            "description": "API working",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "API working"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/jobs": {
+      "get": {
+      "summary": "Get all jobs",
+      "responses": {
+        "200": {
+        "description": "List of jobs",
+        "content": {
+          "application/json": {
+          "schema": {
+            "type": "array",
+            "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+              "type": "integer",
+              "example": 1
+              },
+              "name": {
+              "type": "string",
+              "example": "joe"
+              }
+            }
+            }
+          }
+          }
+        }
+        }
+      }
+      },
+      "post": {
+      "summary": "Create a new job",
+      "requestBody": {
+        "required": true,
+        "content": {
+        "application/json": {
+          "schema": {
+          "type": "object",
+          "properties": {
+            "name": {
+            "type": "string",
+            "example": "joe"
+            }
+          },
+          "required": ["name"]
+          }
+        }
+        }
+      },
+      "responses": {
+        "201": {
+        "description": "Job created",
+        "content": {
+          "application/json": {
+          "schema": {
+            "type": "object",
+            "properties": {
+            "id": {
+              "type": "integer",
+              "example": 2
+            },
+            "name": {
+              "type": "string",
+              "example": "joe"
+            }
+            }
+          }
+          }
+        }
+        }
+      }
+      }
+    }
+  }
+}

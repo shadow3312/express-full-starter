@@ -1,0 +1,47 @@
+{
+  "name": "express-full-starter",
+  "version": "1.0.0",
+  "main": "dist/server.js",
+  "scripts": {
+    "db:generate": "prisma generate",
+    "db:generate:docker": "prisma generate --generator client",
+    "db:seed": "tsx ./prisma/seed.ts",
+    "db": "ts-node scripts/db.ts",
+    "db:migrate": "pnpm db migrate",
+    "db:push": "pnpm db push",
+    "db:studio": "pnpm db studio",
+    "db:reset": "pnpm db reset",
+    "db:deploy": "prisma migrate deploy",
+    "dev": "nodemon",
+    "dev:docker": "pnpm db:generate && nodemon",
+    "build": "pnpm db:generate && tsc && tsc-alias",
+    "postbuild": "pnpm -s exec shx cp -r src/generated dist/generated",
+    "prestart": "pnpm build",
+    "start": "node dist/server.js",
+    "start:pm2": "pm2 start dist/server.js --name express-ts-app"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.10.1",
+    "cors": "^2.8.5",
+    "envalid": "^7.3.1",
+    "express": "^4.21.2",
+    "pm2": "^6.0.8",
+    "prisma": "^6.10.0",
+    "shx": "^0.4.0",
+    "swagger-ui-express": "^4.6.3",
+    "tsc-alias": "^1.8.16",
+    "typescript": "^5.8.3",
+    "winston": "^3.17.0",
+    "zod": "^3.25.67"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.23",
+    "@types/swagger-ui-express": "^4.1.8",
+    "dotenv": "^16.5.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.20.3"
+  }
+}
