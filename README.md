@@ -33,7 +33,7 @@ You can use this boilerplate in 3 different ways:
 
 ### Option 1: GitHub Template (recommended)
 
-1. Click the green **"Use this template"** button on [GitHub](https://github.com/your-username/express-ts-boilerplate)
+1. Click the green **"Use this template"** button on [GitHub](https://github.com/shadow3312/express-full-starter)
 2. Clone your new repo:
    ```bash
    git clone https://github.com/your-org/your-new-repo
@@ -45,7 +45,7 @@ You can use this boilerplate in 3 different ways:
 ### Option 2: Use degit (fast clone, no git history)
 
 ```bash
-pnpm dlx degit shadow3312/express-ts-boilerplate my-app
+pnpm dlx degit shadow3312/express-full-starter my-app
 cd my-app
 pnpm install
 pnpm dev
@@ -61,7 +61,7 @@ Create a `.env` file at the root:
 
 ```env
 NODE_ENV=development
-PORT=3000
+PORT=3001
 DATABASE_URL=postgresql://user:password@localhost:5432/your_db
 ```
 
