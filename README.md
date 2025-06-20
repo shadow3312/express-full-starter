@@ -10,8 +10,10 @@
 </div>
 
 <div align="center">
-This is a **modern and production ready Express.js + TypeScript boilerplate** designed to kickstart your backend projects with best practices and essential tools:
+This is a <b>modern and production ready Express.js + TypeScript boilerplate</b> designed to kickstart your backend projects with best practices and essential tools:
 </div>
+
+---
 
 - ✅ **TypeScript** setup with alias support (`@/` → `src`)
 - 🧱 **Prisma + PostgreSQL** database integration
